@@ -1,0 +1,26 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9",
+    "vite-plugin-solid": "^2.3.0"
+  },
+  "dependencies": {
+    "@hope-ui/solid": "^0.6.7",
+    "@solid-primitives/mouse": "^2.0.4",
+    "@solid-primitives/resize-observer": "^2.0.7",
+    "@stitches/core": "^1.2.8",
+    "@tanstack/solid-virtual": "3.0.0-beta.6",
+    "@tanstack/virtual-core": "3.0.0-alpha.1",
+    "solid-js": "^1.5.1",
+    "solid-transition-group": "^0.0.12"
+  }
+}
