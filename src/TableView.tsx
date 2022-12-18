@@ -1,8 +1,8 @@
-import { HopeProvider, Select, SelectContent, SelectIcon, SelectListbox, SelectOption, SelectOptionIndicator, SelectOptionText, SelectPlaceholder, SelectTrigger, SelectValue } from '@hope-ui/solid'
+import { HopeProvider } from '@hope-ui/solid'
 import { createMousePosition } from '@solid-primitives/mouse'
 import { createElementSize } from '@solid-primitives/resize-observer'
 import { createVirtualizer } from '@tanstack/solid-virtual'
-import { createEffect, createMemo, createSignal, For, onMount } from 'solid-js'
+import { createEffect, createMemo, createSignal, onMount } from 'solid-js'
 import { createStore } from 'solid-js/store'
 
 const rowCount = 10000000
@@ -52,30 +52,6 @@ function Cell({ x, y }) {
 		<div style={{ flex: 1, background: isHovering() ? 'blue' : 'transparent' }}>
 			{x} {y} {state.rows.get(y)?.toString()}
 		</div>
-	)
-
-	return (
-		<>
-			<Select multiple>
-				<SelectTrigger>
-					<SelectPlaceholder>Choose some frameworks</SelectPlaceholder>
-					<SelectValue />
-					<SelectIcon />
-				</SelectTrigger>
-				<SelectContent>
-					<SelectListbox>
-						<For each={['React', 'Angular', 'Vue', 'Svelte', 'Solid']}>
-							{(item) => (
-								<SelectOption value={item}>
-									<SelectOptionText>{item}</SelectOptionText>
-									<SelectOptionIndicator />
-								</SelectOption>
-							)}
-						</For>
-					</SelectListbox>
-				</SelectContent>
-			</Select>
-		</>
 	)
 }
 
