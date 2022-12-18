@@ -7,6 +7,10 @@ specifiers:
   '@stitches/core': ^1.2.8
   '@tanstack/solid-virtual': 3.0.0-beta.6
   '@tanstack/virtual-core': 3.0.0-alpha.1
+  '@zag-js/menu': ^0.3.2
+  '@zag-js/pressable': ^0.3.5
+  '@zag-js/select': ^0.1.5
+  '@zag-js/solid': ^0.2.3
   solid-js: ^1.5.1
   solid-transition-group: ^0.0.12
   typescript: ^4.8.2
@@ -20,6 +24,10 @@ dependencies:
   '@stitches/core': 1.2.8
   '@tanstack/solid-virtual': 3.0.0-beta.6
   '@tanstack/virtual-core': 3.0.0-alpha.1
+  '@zag-js/menu': 0.3.2
+  '@zag-js/pressable': 0.3.5
+  '@zag-js/select': 0.1.5
+  '@zag-js/solid': 0.2.3_solid-js@1.5.1
   solid-js: 1.5.1
   solid-transition-group: 0.0.12_solid-js@1.5.1
 
@@ -350,10 +358,20 @@ packages:
     resolution: {integrity: sha512-jktYRmZwmau63adUG3GKOAVCofBXkk55S/zQ94XOorAHhwqFIOFAy1rSp2N0Wp6/tGbe9V3u/ExlGZypyY17rg==}
     dev: false
 
+  /@floating-ui/core/1.0.4:
+    resolution: {integrity: sha512-FPFLbg2b06MIw1dqk2SOEMAMX3xlrreGjcui5OTxfBDtaKTmh0kioOVjT8gcfl58juawL/yF+S+gnq8aUYQx/Q==}
+    dev: false
+
   /@floating-ui/dom/0.4.4:
     resolution: {integrity: sha512-0Ulu3B/dqQplUUSqnTx0foSrlYuMN+GTtlJWvNJwt6Fr7/PqmlR/Y08o6/+bxDWr6p3roBJRaQ51MDZsNmEhhw==}
     dependencies:
       '@floating-ui/core': 0.6.2
+    dev: false
+
+  /@floating-ui/dom/1.0.10:
+    resolution: {integrity: sha512-ZRe5ZmtGYCd82zrjWnnMW8hN5H1otedLh0Ur6rRo6f0exbEe6IlkVvo1RO7tgiMvbF0Df8hkhdm50VcVYqwP6g==}
+    dependencies:
+      '@floating-ui/core': 1.0.4
     dev: false
 
   /@hope-ui/solid/0.6.7_6zl7hirhjpil63vdnqmd4uqlmy:
@@ -481,6 +499,85 @@ packages:
       '@reach/observe-rect': 1.2.0
     dev: false
 
+  /@zag-js/anatomy/0.1.2:
+    resolution: {integrity: sha512-sj+KuCdPG+wAkAeyROXbN9FbVLTrDZk3N/Am1lL+TQKmZH28NRezt0Wf9arVHCJ+mDnZhW173CoxZ8B5cKT8Kw==}
+    dev: false
+
+  /@zag-js/core/0.2.3:
+    resolution: {integrity: sha512-+YjI1cPnvd3DEuWEO/MWg88OrV6Wh5uO1c0Azb6+9QOrlKfBTEGPJUy5KWd2greyTw9oXyUJX3CsEw8YbRVTIw==}
+    dependencies:
+      '@zag-js/store': 0.2.1
+      klona: 2.0.5
+    dev: false
+
+  /@zag-js/dismissable/0.2.0:
+    resolution: {integrity: sha512-AP5H9szbSg4T5ntXVB86AEGLwO47Cr/LoJrydDiy2Zlk332fZ54wt8oKAI+aTkgGDF9xKp6GHnwS7JWKxGPfmQ==}
+    dependencies:
+      '@zag-js/interact-outside': 0.2.0
+    dev: false
+
+  /@zag-js/interact-outside/0.2.0:
+    resolution: {integrity: sha512-vj+roRkCI5NogZApuporXoWMI5uq57zWzFGsQUL2Yl91Oq7l448IvWzmmoSi+Tsgd4aGO7hwbJCvp3oqjCa5JA==}
+    dev: false
+
+  /@zag-js/menu/0.3.2:
+    resolution: {integrity: sha512-6OTpsSM7Ad5ui8O8wG5tMXWpf/Q5dqpgeDI/Doig6aEwLpEu7QYV5AdiS+Sio10sK5IkVMVpBV35IaQAn0Mw3Q==}
+    dependencies:
+      '@zag-js/anatomy': 0.1.2
+      '@zag-js/core': 0.2.3
+      '@zag-js/dismissable': 0.2.0
+      '@zag-js/popper': 0.2.1
+      '@zag-js/types': 0.3.1
+    dev: false
+
+  /@zag-js/popper/0.2.1:
+    resolution: {integrity: sha512-u9LH5/XGzhmdJxJuZe1P5pMcQVNuCrpc2r2L9jCev55xAIgegpIVjbUgebDvpYURxRrSNovQU3fXRnQPiLAw1A==}
+    dependencies:
+      '@floating-ui/dom': 1.0.10
+    dev: false
+
+  /@zag-js/pressable/0.3.5:
+    resolution: {integrity: sha512-uYTKfWOCNWlxy6b3hF876HBS9OjxrkR/EQhXh7hcsTVefdsC3jl+t7La6KWTr0dzQzq6vDeH81EjOFflIhBlZA==}
+    dependencies:
+      '@zag-js/anatomy': 0.1.2
+      '@zag-js/core': 0.2.3
+      '@zag-js/types': 0.3.1
+    dev: false
+
+  /@zag-js/select/0.1.5:
+    resolution: {integrity: sha512-85bsJT199XL/OtQehN7aCuegcYbrVGx50o+atwGbKPBXMm9XXuwGLx2F+wsIZ8nvWfYoQ67JAtNJNao5JrU8yA==}
+    dependencies:
+      '@zag-js/anatomy': 0.1.2
+      '@zag-js/core': 0.2.3
+      '@zag-js/interact-outside': 0.2.0
+      '@zag-js/popper': 0.2.1
+      '@zag-js/types': 0.3.1
+    dev: false
+
+  /@zag-js/solid/0.2.3_solid-js@1.5.1:
+    resolution: {integrity: sha512-3LNcYoLa3v0ayGr0Pgt49OmYrm7uTyl/dO6zNKiITN0XMYGGKWc/dAGunGlDpj7lW9i8AlYH760muQPnLTkl0g==}
+    peerDependencies:
+      solid-js: '>=1.1.3'
+    dependencies:
+      '@zag-js/core': 0.2.3
+      '@zag-js/store': 0.2.1
+      '@zag-js/types': 0.3.1
+      hyphenate-style-name: 1.0.4
+      solid-js: 1.5.1
+    dev: false
+
+  /@zag-js/store/0.2.1:
+    resolution: {integrity: sha512-QYmAyh9hXRSmqKirD/nyTohSOI86fenSdtF177W88Jyv0SfaGSv4Z+o+kU6g62c+XIQVEP/W9LL3ZH075lQI9A==}
+    dependencies:
+      proxy-compare: 2.3.0
+    dev: false
+
+  /@zag-js/types/0.3.1:
+    resolution: {integrity: sha512-mSGkt+mqmvE+E6RAR1py74Pbzb5q2HjhijkpsUojHsDa+DIX9KJ2XTKGt9Dv3qxqwY81/pQdBQFNLDNKMAeYdQ==}
+    dependencies:
+      csstype: 3.1.1
+    dev: false
+
   /ansi-styles/3.2.1:
     resolution: {integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==}
     engines: {node: '>=4'}
@@ -555,6 +652,10 @@ packages:
 
   /csstype/3.1.0:
     resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
+
+  /csstype/3.1.1:
+    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
+    dev: false
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -835,6 +936,10 @@ packages:
     resolution: {integrity: sha512-c3Ab/url5ksaT0WyleslpBEthOzWhrjQbg75y7XUsfSzi3Dgzt0l8w5e7DylRn15MTlMMD58dTfzddNS2kcAjQ==}
     dev: true
 
+  /hyphenate-style-name/1.0.4:
+    resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
+    dev: false
+
   /is-core-module/2.10.0:
     resolution: {integrity: sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==}
     dependencies:
@@ -861,6 +966,11 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
     dev: true
+
+  /klona/2.0.5:
+    resolution: {integrity: sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==}
+    engines: {node: '>= 8'}
+    dev: false
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -904,6 +1014,10 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
+
+  /proxy-compare/2.3.0:
+    resolution: {integrity: sha512-c3L2CcAi7f7pvlD0D7xsF+2CQIW8C3HaYx2Pfgq8eA4HAl3GAH6/dVYsyBbYF/0XJs2ziGLrzmz5fmzPm6A0pQ==}
+    dev: false
 
   /resolve/1.22.1:
     resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
